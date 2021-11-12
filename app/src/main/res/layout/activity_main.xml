@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logo"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextEmailMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="79dp"
+        android:ems="10"
+        android:hint="Username..."
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPasswordMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextPasswordMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="200dp"
+        android:ems="10"
+        android:hint="Password..."
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/loginButtonMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailMain" />
+
+    <Button
+        android:id="@+id/loginButtonMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="400dp"
+        android:onClick="loginButton"
+        android:text="Log In"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordMain" />
+
+    <TextView
+        android:id="@+id/signupTextMain"
+        android:layout_width="61dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="108dp"
+        android:onClick="go_to_sign_up"
+        android:text="Sign up..."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButtonMain" />
+
+    <Button
+        android:onClick="gotoAddRest"
+        android:id="@+id/btnAddRestaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="323dp"
+        android:layout_marginBottom="31dp"
+        android:text="Add Rest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAllRestMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordMain" />
+
+    <Button
+        android:onClick="gotoAllRests"
+        android:id="@+id/btnAllRestMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="323dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="31dp"
+        android:text="All Rest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAddRestaurant"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordMain" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
